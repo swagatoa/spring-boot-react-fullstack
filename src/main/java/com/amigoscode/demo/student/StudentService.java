@@ -36,7 +36,7 @@ public class StudentService {
                 .orElse(UUID.randomUUID());
 
         if (!emailValidator.test(student.getEmail())) {
-            throw new ApiRequestException(student.getEmail() + " is not valid");
+            throw new ApiRequestException(student.getEmail() + " izz not valid");
         }
 
         if (studentDataAccessService.isEmailTaken(student.getEmail())) {
